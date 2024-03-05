@@ -1,0 +1,55 @@
+actor {
+  public query func greet(name : Text) : async Text {
+    return "Hello, " # name # "!";
+  };
+};
+// main.mo
+
+actor class ClimateCare {
+  // Main data
+  public var owner : Text = "fafa";
+  public var websiteName : Text = "ClimaCare";
+  public var theme : Text = "Climate Analysis";
+  public var vision : Text = "Our vision is to help people with climate issues.";
+
+  // Function to check the climate temperature at a specific location
+  public shared(msg) func checkTemperature(location : Text) : async Nat {
+    // Implementation of retrieving temperature data based on location (assumed to return temperature in Celsius)
+    // ...
+    return 25; // Example of returned temperature value (assumed)
+  };
+
+  // Function to view data of places affected by severe climate
+  public shared(msg) func getSevereLocations() : async Text {
+    // Implementation of retrieving data on locations affected by severe climate
+    // ...
+    return "Location A, Location B, Location C"; // Example of location data affected by severe climate (assumed)
+  };
+
+  // Function for website access approval
+  public shared(msg) func approveAccess(requester : Text) : async Bool {
+    // Implementation of access approval logic
+    return owner == requester;
+  };
+
+  // Function for error handling by requesting help
+  public shared(msg) func requestAssistance() : async Text {
+    // Implementation of help request logic
+    // ...
+    return "The request for assistance has been sent"; // Example response (assumed)
+  };
+
+  // Function to ensure website speed
+  public shared(msg) func checkWebsiteSpeed() : async Text {
+    // Implementation of website speed check logic
+    // ...
+    return "The website is working fast"; // Sample response (assumed)
+  };
+
+  // Function for neat data storage
+  public shared(msg) func organizeData() : async Text {
+    // Implementation of neat data storage logic
+    // ...
+    return "Data saved successfully"; // Sample response (assumed)
+  };
+};There was an error committing your changes: File could not be edited
